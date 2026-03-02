@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Github, Mail, ExternalLink, Code2, Rocket, ShieldCheck } from 'lucide-react';
 
 export default function PortfolioPage() {
@@ -17,7 +18,7 @@ export default function PortfolioPage() {
         </div>
       </nav>
 
-      <main className="max-w-5xl mx-auto px-6 py-20 space-y-32">
+      <main className="max-w-5xl mx-auto px-6 py-20 space-y-16">
 
         {/* 2. Hero Section: 본인의 정체성을 한 줄로 정의 */}
         <section className="space-y-6 py-10">
@@ -42,16 +43,17 @@ export default function PortfolioPage() {
 
 
         {/* Projects Section */}
-        <section id="projects" className="space-y-16">
+        <section id="projects" className="space-y-2">
           <div className="flex items-end justify-between border-b border-zinc-100 pb-4">
             <h2 className="text-3xl font-bold tracking-tight">Projects</h2>
           </div>
+          <p className="text-xs uppercase tracking-widest font-bold text-zinc-400 py-4">Featured Projects</p>
 
           {/* Featured: 3 equal cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
             {/* Card 1: 보드버디 */}
-            <div className="group space-y-4">
+            <Link href="/projects/boardbuddy" className="group space-y-4 block">
               <div className="aspect-video bg-zinc-100 rounded-2xl overflow-hidden relative">
                 <div className="absolute inset-0 flex items-center justify-center text-zinc-300 group-hover:scale-110 transition-transform duration-500">
                   <Rocket size={48} strokeWidth={1} />
@@ -72,10 +74,10 @@ export default function PortfolioPage() {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* Card 2: 카카오 임팩트 */}
-            <div className="group space-y-4">
+            <Link href="/projects/bttf" className="group space-y-4 block">
               <div className="aspect-video bg-zinc-100 rounded-2xl overflow-hidden relative">
                 <div className="absolute inset-0 flex items-center justify-center text-zinc-300 group-hover:scale-110 transition-transform duration-500">
                   <Code2 size={48} strokeWidth={1} />
@@ -96,10 +98,10 @@ export default function PortfolioPage() {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* Card 3: Rust 보안 프로젝트 */}
-            <div className="group space-y-4">
+            <Link href="/projects/rdp" className="group space-y-4 block">
               <div className="aspect-video bg-zinc-900 rounded-2xl overflow-hidden relative">
                 <ShieldCheck className="absolute top-6 right-6 text-zinc-800" size={80} />
                 <div className="absolute inset-0 flex items-end p-5">
@@ -122,7 +124,7 @@ export default function PortfolioPage() {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
 
           </div>
 
@@ -229,6 +231,14 @@ export default function PortfolioPage() {
                 <div className="flex items-baseline justify-between">
                   <span className="text-sm font-semibold">English</span>
                   <span className="text-xs text-zinc-400">OPIc AL · 2025</span>
+                </div>
+                <div className="flex items-baseline justify-between">
+                  <span className="text-sm font-semibold"></span>
+                  <span className="text-xs text-zinc-400">Exchange Program, Cardiff, UK · 2023</span>
+                </div>
+                <div className="flex items-baseline justify-between">
+                  <span className="text-sm font-semibold"></span>
+                  <span className="text-xs text-zinc-400">Overseas Experience, NC, USA · 2010-2012</span>
                 </div>
               </div>
             </div>
