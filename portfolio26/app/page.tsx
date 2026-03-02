@@ -1,13 +1,25 @@
 import React from 'react';
 import Link from 'next/link';
 import { Github, Mail, ExternalLink, Code2, Rocket, ShieldCheck } from 'lucide-react';
+import EducationCard from '@/components/EducationCard';
+import Orb from '@/components/Orb';
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen bg-white text-zinc-900 selection:bg-zinc-100">
+    <div className="min-h-screen text-zinc-900 selection:bg-zinc-100 relative">
+
+      {/* 0. Orb — anchored near hero, no scroll follow */}
+      {/* <div className="absolute left-2/5 -translate-x-1/2 top-16 w-[680px] h-[680px] -z-10">
+        <Orb
+          hue={54}
+          hoverIntensity={0.32}
+          rotateOnHover={true}
+          forceHoverState={false}
+        />
+      </div> */}
 
       {/* 1. Navigation: 아주 최소한의 정보만 담은 상단 바 */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-zinc-100">
+      <nav className="sticky top-0 z-50 bg-white/60 backdrop-blur-md border-b border-zinc-100/60">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <span className="font-bold tracking-tighter text-xl">JAKE.DEV</span>
           <div className="flex gap-6 text-sm font-medium text-zinc-500">
@@ -50,7 +62,7 @@ export default function PortfolioPage() {
           <p className="text-xs uppercase tracking-widest font-bold text-zinc-400 py-4">Featured Projects</p>
 
           {/* Featured: 3 equal cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 space-y-8">
 
             {/* Card 1: 보드버디 */}
             <Link href="/projects/boardbuddy" className="group space-y-4 block">
@@ -179,11 +191,7 @@ export default function PortfolioPage() {
             <div className="space-y-5">
               <h3 className="text-xs uppercase tracking-widest font-bold text-zinc-400">Education</h3>
               <div className="space-y-4">
-                <div className="space-y-1">
-                  <p className="font-semibold text-sm leading-snug">Korea Advanced Institute of Science and Technology</p>
-                  <p className="text-zinc-500 text-sm">B.S. Computing · Minor in Biology</p>
-                  <p className="text-zinc-400 text-xs">2020 – 2026</p>
-                </div>
+                <EducationCard />
                 <div className="space-y-1">
                   <p className="font-semibold text-sm leading-snug">Gyeonggi Science High School for the Gifted</p>
                   <p className="text-zinc-400 text-xs">2017 – 2020</p>
@@ -204,7 +212,7 @@ export default function PortfolioPage() {
                 <div className="space-y-2">
                   <p className="text-xs text-zinc-400 font-medium">Proficient</p>
                   <div className="flex flex-wrap gap-2">
-                    {['C/C++', 'Python', 'SQL', 'Rust', 'React', 'Next.js', 'Node.js'].map(s => (
+                    {['C/C++', 'Python', 'SQL', 'Java', 'Swift', 'R', 'React', 'FastAPI', 'SolidJS', 'Docker'].map(s => (
                       <span key={s} className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-800 text-white rounded">{s}</span>
                     ))}
                   </div>
@@ -212,7 +220,7 @@ export default function PortfolioPage() {
                 <div className="space-y-2">
                   <p className="text-xs text-zinc-400 font-medium">Experienced</p>
                   <div className="flex flex-wrap gap-2">
-                    {['Java', 'Swift', 'R', 'Scala', 'FastAPI', 'SolidJS', 'WebAssembly', 'Docker'].map(s => (
+                    {['Next.js', 'Node.js', 'WebAssembly', 'Scala', 'Rust'].map(s => (
                       <span key={s} className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-100 rounded text-zinc-500">{s}</span>
                     ))}
                   </div>
