@@ -13,7 +13,7 @@ export default function PortfolioPage() {
           <div className="flex gap-6 text-sm font-medium text-zinc-500">
             <a href="#projects" className="hover:text-zinc-900 transition-colors">Projects</a>
             <a href="#about" className="hover:text-zinc-900 transition-colors">About</a>
-            <a href="mailto:your-email@example.com" className="hover:text-zinc-900 transition-colors">Contact</a>
+            <a href="mailto:jaybin7@gmail.com" className="hover:text-zinc-900 transition-colors">Contact</a>
           </div>
         </div>
       </nav>
