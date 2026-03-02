@@ -1,6 +1,4 @@
-#NOT FINAL MUST BE REVIEWED
-
-name: Deploy Next.js site to Pages
+name: Deploy Next.js site to GitHub Pages
 
 on:
   push:
@@ -19,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./portfolio26
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,6 +29,7 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
+          cache-dependency-path: portfolio26/package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -40,15 +42,15 @@ jobs:
         run: npm run build
         env:
           PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
+          EXPORT_FOR_PAGES: "true"
 
-      # Optional safety for underscore folders if any Jekyll processing occurs:
       - name: Disable Jekyll
         run: touch out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./portfolio26/out
 
   deploy:
     runs-on: ubuntu-latest

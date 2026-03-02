@@ -1,19 +1,20 @@
 import type { NextConfig } from "next";
 
+// Set by the GitHub Actions workflow only — not present on Vercel
+const isGitHubPages = process.env.EXPORT_FOR_PAGES === "true";
+
 const nextConfig: NextConfig = {
-  /* config options here */
-  // 1) Make Next build a fully static site into /out
-  output: "export", // :contentReference[oaicite:6]{index=6}
+  // Static export only for GitHub Pages; Vercel uses native Next.js support
+  ...(isGitHubPages && { output: "export" }),
 
-  // 2) GitHub Pages project sites are served from /<repo>
-  // GitHub Actions will provide this value automatically.
-  basePath: process.env.PAGES_BASE_PATH,
+  // basePath is set by GH Pages CI; empty string on Vercel (no basePath)
+  basePath: process.env.PAGES_BASE_PATH || "",
 
-  // 3) GitHub Pages can’t run Next’s image optimization server
-  images: { unoptimized: true }, // :contentReference[oaicite:7]{index=7}
+  // Disable Next.js image optimization (required for static hosts, harmless on Vercel)
+  images: { unoptimized: true },
 
-  // 4) Helps static hosts resolve routes consistently
-  trailingSlash: true, // optional but commonly helpful :contentReference[oaicite:8]{index=8}
+  // Helps static hosts resolve routes correctly
+  trailingSlash: true,
 };
 
 export default nextConfig;
