@@ -64,55 +64,7 @@ export default function PortfolioPage() {
           {/* Featured: 3 equal cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 space-y-8">
 
-            {/* Card 1: 보드버디 */}
-            <Link href="/projects/boardbuddy" className="group space-y-4 block">
-              <div className="aspect-video bg-zinc-100 rounded-2xl overflow-hidden relative">
-                <div className="absolute inset-0 flex items-center justify-center text-zinc-300 group-hover:scale-110 transition-transform duration-500">
-                  <Rocket size={48} strokeWidth={1} />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-bold">Boardbuddy</h3>
-                  <ExternalLink size={15} className="text-zinc-400" />
-                </div>
-                <p className="text-zinc-600 text-sm leading-relaxed">
-                  스노보드 동아리 운영 자동화를 위한 풀스택 웹 서비스.
-                  기획부터 베타테스팅, 실제 운영까지 제품 전 과정을 리딩했습니다.
-                </p>
-                <div className="flex flex-wrap gap-2 pt-1">
-                  {['Next.js', 'Vercel', 'PostgreSQL'].map(tag => (
-                    <span key={tag} className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-100 rounded text-zinc-500">{tag}</span>
-                  ))}
-                </div>
-              </div>
-            </Link>
-
-            {/* Card 2: 카카오 임팩트 */}
-            <Link href="/projects/bttf" className="group space-y-4 block">
-              <div className="aspect-video bg-zinc-100 rounded-2xl overflow-hidden relative">
-                <div className="absolute inset-0 flex items-center justify-center text-zinc-300 group-hover:scale-110 transition-transform duration-500">
-                  <Code2 size={48} strokeWidth={1} />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-bold">Kakao Impact Project</h3>
-                  <ExternalLink size={15} className="text-zinc-400" />
-                </div>
-                <p className="text-zinc-600 text-sm leading-relaxed">
-                  사회적 취약점 개선을 위한 솔루션 개발 및 코엑스 컨퍼런스 발표.
-                  2년간의 점진적 개선을 통해 임팩트를 측정하고 검증했습니다.
-                </p>
-                <div className="flex flex-wrap gap-2 pt-1">
-                  {['React', 'Social Impact', 'Data Analysis'].map(tag => (
-                    <span key={tag} className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-100 rounded text-zinc-500">{tag}</span>
-                  ))}
-                </div>
-              </div>
-            </Link>
-
-            {/* Card 3: Rust 보안 프로젝트 */}
+            {/* Card 1: Rust 보안 프로젝트 */}
             <Link href="/projects/rdp" className="group space-y-4 block">
               <div className="aspect-video bg-zinc-900 rounded-2xl overflow-hidden relative">
                 <ShieldCheck className="absolute top-6 right-6 text-zinc-800" size={80} />
@@ -132,6 +84,62 @@ export default function PortfolioPage() {
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
                   {['Rust', 'WebAssembly', 'Security'].map(tag => (
+                    <span key={tag} className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-100 rounded text-zinc-500">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </Link>
+
+
+
+            {/* Card 2: 카카오 임팩트 */}
+            <Link href="/projects/bttf" className="group space-y-3 block">
+              <div className="aspect-video bg-zinc-100 rounded-2xl overflow-hidden relative">
+                <div className="absolute inset-0 flex items-center justify-center text-zinc-300 group-hover:scale-110 transition-transform duration-500">
+                  <Code2 size={48} strokeWidth={1} />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-200/80 to-transparent" />
+                <div className="absolute inset-0 flex items-end p-5">
+                  <div className="flex items-center justify-between w-full">
+                    <h3 className="text-lg font-bold text-zinc-800">Tech for Impact</h3>
+                    <ExternalLink size={15} className="text-zinc-500" />
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-2 px-1">
+                <p className="text-zinc-600 text-sm leading-relaxed">
+                  사회적 취약점 개선을 위한 솔루션 개발 및 코엑스 컨퍼런스 발표.
+                  2년간의 점진적 개선을 통해 임팩트를 측정하고 검증했습니다.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {['React', 'Social Impact', 'Data Analysis'].map(tag => (
+                    <span key={tag} className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-100 rounded text-zinc-500">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </Link>
+
+            {/* Card 3: 보드버디 */}
+            <Link href="/projects/boardbuddy" className="group space-y-3 block">
+              <div className="aspect-video bg-zinc-100 rounded-2xl overflow-hidden relative">
+                <div className="absolute inset-0 flex items-center justify-center text-zinc-300 group-hover:scale-110 transition-transform duration-500">
+                  <Rocket size={48} strokeWidth={1} />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-200/80 to-transparent" />
+                <div className="absolute inset-0 flex items-end p-5">
+                  <div className="flex items-center justify-between w-full">
+                    <h3 className="text-lg font-bold text-zinc-800">Boardbuddy</h3>
+                    <ExternalLink size={15} className="text-zinc-500" />
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-2 px-1">
+                <p className="text-zinc-600 text-sm leading-relaxed">
+                  스노보드 동아리 운영 자동화를 위한 풀스택 웹 서비스.
+                  기획부터 베타테스팅, 실제 운영까지 제품 전 과정을 리딩했습니다.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {['Next.js', 'Vercel', 'PostgreSQL'].map(tag => (
                     <span key={tag} className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-100 rounded text-zinc-500">{tag}</span>
                   ))}
                 </div>
