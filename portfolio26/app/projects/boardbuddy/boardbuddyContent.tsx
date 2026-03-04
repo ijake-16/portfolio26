@@ -152,66 +152,85 @@ export default function BoardbuddyContent() {
             </section>
 
             {/* 4. Technical Challenge & Architecture */}
-            <section className="space-y-12 border-t border-zinc-100 pt-16">
-                <div className="flex items-center gap-6">
-                    <span className="text-7xl font-black text-zinc-100 italic tracking-tighter select-none">TECH</span>
-                    <div className="space-y-1">
-                        <h2 className="text-sm uppercase tracking-[0.2em] font-bold text-blue-600">Engineering Challenges</h2>
-                        <h3 className="text-3xl font-extrabold text-zinc-900 tracking-tight">대규모 유입과 데이터 정합성을 위한 고민</h3>
+            <section className="border-t border-zinc-100 pt-16 flex flex-col items-center">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 mb-12 self-start w-full max-w-[800px] mx-auto relative px-8">
+                    <span className="absolute -left-12 sm:-left-32 top-1/2 -translate-y-1/2 text-[80px] sm:text-[100px] font-black text-zinc-100 italic tracking-tighter select-none opacity-80 z-0">TECH</span>
+                    <div className="space-y-1 bg-white/50 backdrop-blur-sm z-10 p-2">
+                        <h2 className="text-xs sm:text-sm uppercase tracking-[0.2em] font-bold text-blue-600">Engineering Challenges</h2>
+                        <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight">
+                            {lang === 'ko' ? '대규모 유입과 데이터 정합성을 위한 고민' : 'Tackling Scale and Data Integrity'}
+                        </h3>
                     </div>
                 </div>
 
-                <div className="bg-[#18181b] rounded-[2.5rem] p-10 md:p-14 lg:p-16 text-zinc-300 shadow-2xl">
-                    <div className="grid lg:grid-cols-12 gap-16 lg:gap-12 items-center">
+                <div className="w-full max-w-[700px] sm:max-w-[900px] lg:max-w-[1024px] mx-auto bg-[#1a1a1c] rounded-[2rem] sm:rounded-[2.5rem] p-6 pt-10 pb-6 sm:p-10 lg:px-16 lg:py-16 text-zinc-300 shadow-2xl relative">
+                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-14">
                         {/* Left Column: Text content */}
-                        <div className="lg:col-span-7 space-y-12">
+                        <div className="flex-1 space-y-12 lg:pr-4 pt-4">
                             {/* Synergy */}
                             <div className="space-y-4">
-                                <h4 className="flex items-center gap-3 text-blue-500 font-bold uppercase tracking-[0.15em] text-sm">
-                                    <Database size={20} /> Full-Stack Synergy
+                                <h4 className="flex items-center gap-3 text-blue-500 font-bold uppercase tracking-[0.15em] text-xs sm:text-sm">
+                                    <Database size={18} className="shrink-0" /> Full-Stack Synergy
                                 </h4>
-                                <p className="text-[17px] leading-relaxed font-medium text-zinc-300">
-                                    사용자가 집중되는 시즌 피크 타임의 <strong className="text-white font-semibold">동시성 이슈(Race Condition)</strong>를 해결하기 위해
-                                    <strong className="text-white font-semibold"> Redis</strong>를 활용한 분산 락(Distributed Lock) 전략을 백엔드 팀과 설계했습니다.
-                                    프론트엔드에서는 쾌적한 UX를 위해 낙관적 업데이트(Optimistic UI)를 적용했습니다.
+                                <p className="text-[15px] sm:text-[16px] leading-[1.8] text-zinc-300/80 break-keep">
+                                    {lang === 'ko' ? (
+                                        <>
+                                            사용자가 집중되는 시즌 피크 타임의 <strong className="text-white font-semibold">동시성 이슈(Race Condition)</strong>를 해결하기 위해
+                                            <strong className="text-white font-semibold"> Redis</strong>를 활용한 분산 락(Distributed Lock) 전략을 백엔드 팀과 설계했습니다.
+                                            프론트엔드에서는 쾌적한 UX를 위해 낙관적 업데이트(Optimistic UI)를 적용했습니다.
+                                        </>
+                                    ) : (
+                                        <>
+                                            To resolve <strong className="text-white font-medium">Race Conditions</strong> during peak season traffic, I designed a <strong className="text-white font-medium">Redis</strong>-based Distributed Lock strategy with the backend team. On the frontend, implemented Optimistic UI updates to ensure a seamless and responsive user experience.
+                                        </>
+                                    )}
                                 </p>
                             </div>
 
                             {/* Performance */}
                             <div className="space-y-4">
-                                <h4 className="flex items-center gap-3 text-blue-500 font-bold uppercase tracking-[0.15em] text-sm">
-                                    <Smartphone size={20} /> Responsive Performance
+                                <h4 className="flex items-center gap-3 text-blue-500 font-bold uppercase tracking-[0.15em] text-xs sm:text-sm">
+                                    <Smartphone size={18} className="shrink-0" /> Responsive Performance
                                 </h4>
-                                <p className="text-[17px] leading-relaxed font-medium text-zinc-300">
-                                    영하의 추운 스키장에서 모바일로 접속하는 유저들을 위해 <strong className="text-white font-semibold">경량화된 React 컴포넌트 구조</strong>를 채택했습니다.
-                                    복잡한 캘린더 라이브러리를 직접 커스터마이징하여 불필요한 리렌더링을 80% 이상 감소시켰습니다.
+                                <p className="text-[15px] sm:text-[16px] leading-[1.8] text-zinc-300/80 break-keep">
+                                    {lang === 'ko' ? (
+                                        <>
+                                            영하의 추운 스키장에서 모바일로 접속하는 유저들을 위해 <strong className="text-white font-semibold">경량화된 React 컴포넌트 구조</strong>를 채택했습니다.
+                                            복잡한 캘린더 라이브러리를 직접 커스터마이징하여 불필요한 리렌더링을 80% 이상 감소시켰습니다.
+                                        </>
+                                    ) : (
+                                        <>
+                                            Adopted a <strong className="text-white font-medium">lightweight React component architecture</strong> tailored for users accessing the app via mobile in freezing ski resort conditions. By heavily customizing complex calendar libraries, we reduced unnecessary re-renders by over 80%.
+                                        </>
+                                    )}
                                 </p>
                             </div>
                         </div>
 
                         {/* Right Column: Code Editor style card */}
-                        <div className="lg:col-span-5 w-full">
-                            <div className="bg-[#242528] rounded-3xl p-8 lg:p-10 border border-white/5 shadow-xl">
-                                <h5 className="text-white font-bold text-lg flex items-center gap-3 mb-8">
-                                    <TrendingUp className="text-blue-400" /> Tech Stack Detail
+                        <div className="w-full lg:w-[320px] shrink-0 lg:-mr-10">
+                            <div className="w-full bg-[#212124] rounded-2xl p-8 border border-[#2d2d30] shadow-2xl relative h-full flex flex-col justify-center">
+                                <h5 className="text-white font-bold text-[18px] flex items-center gap-3 mb-10 leading-snug">
+                                    <TrendingUp className="text-[#3b82f6] shrink-0" size={20} />
+                                    <span className="flex flex-col"><span>Tech Stack</span><span>Detail</span></span>
                                 </h5>
 
-                                <div className="space-y-2 font-mono text-[15px]">
-                                    <div className="flex items-start gap-4 py-4 border-b border-white/10">
-                                        <span className="text-zinc-500 w-28 shrink-0 mt-0.5">Frontend</span>
-                                        <span className="text-blue-400 leading-relaxed">React, Tailwind CSS</span>
+                                <div className="space-y-0 font-mono text-[13px]">
+                                    <div className="flex items-start justify-between gap-4 py-4 border-b border-[#2d2d30]">
+                                        <span className="text-[#737373] mt-1 shrink-0">Frontend</span>
+                                        <span className="text-blue-300 leading-[1.8] text-left w-[110px]">React,<br />Tailwind<br />CSS</span>
                                     </div>
-                                    <div className="flex items-start gap-4 py-4 border-b border-white/10">
-                                        <span className="text-zinc-500 w-28 shrink-0 mt-0.5">Backend</span>
-                                        <span className="text-blue-400 leading-relaxed">Spring Boot, JPA</span>
+                                    <div className="flex items-start justify-between gap-4 py-4 border-b border-[#2d2d30]">
+                                        <span className="text-[#737373] mt-1 shrink-0">Backend</span>
+                                        <span className="text-blue-300 leading-[1.8] text-left w-[110px]">Spring<br />Boot,<br />JPA</span>
                                     </div>
-                                    <div className="flex items-start gap-4 py-4 border-b border-white/10">
-                                        <span className="text-zinc-500 w-28 shrink-0 mt-0.5">Cache/DB</span>
-                                        <span className="text-emerald-400 leading-relaxed">Redis,<br />PostgreSQL</span>
+                                    <div className="flex items-start justify-between gap-4 py-4 border-b border-[#2d2d30]">
+                                        <span className="text-[#737373] mt-1 shrink-0">Cache/DB</span>
+                                        <span className="text-emerald-300 leading-[1.8] text-left w-[110px]">Redis,<br />PostgreSQL</span>
                                     </div>
-                                    <div className="flex items-start gap-4 py-4">
-                                        <span className="text-zinc-500 w-28 shrink-0 mt-0.5">Collaboration</span>
-                                        <span className="text-pink-400 leading-relaxed">Git, Notion,<br />Figma</span>
+                                    <div className="flex items-start justify-between gap-4 py-4">
+                                        <span className="text-[#737373] mt-1 shrink-0">Collaboration</span>
+                                        <span className="text-pink-300 leading-[1.8] text-left w-[110px]">Git,<br />Notion,<br />Figma</span>
                                     </div>
                                 </div>
                             </div>
