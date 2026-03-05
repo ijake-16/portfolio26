@@ -38,9 +38,8 @@ export default function PortfolioPage() {
             Technical PM&middot;PO <br />
             <span className="text-zinc-400">& Developer.</span>
           </h1>
-          <p className="text-lg md:text-xl text-zinc-600 max-w-2xl leading-relaxed">
-            심도있는 이공학적 기본기를 바탕으로 기술적 한계를 비즈니스 기회로 바꿉니다.
-            단순히 기능을 만드는 것을 넘어, 실제 사용자에게 닿는 제품의 일생을 관리합니다.
+          <p className="text-lg md:text-xl text-zinc-600 max-w-2xl leading-snug break-keep">
+            탄탄한 이공학적 근거로 기술적 한계를 비즈니스로 치환하고, 구현을 넘어 제품이 사용자에게 닿는 모든 순간을 책임집니다.
           </p>
           <div className="flex gap-4 pt-4">
             <a href="https://github.com/ijake-16" className="p-2 rounded-full border border-zinc-200 hover:bg-zinc-50 transition-all">
@@ -79,11 +78,11 @@ export default function PortfolioPage() {
               </div>
               <div className="space-y-2">
                 <p className="text-zinc-600 text-sm leading-relaxed">
-                  C++ 기반 보안 솔루션을 Rust로 분석하고 웹(WASM)으로 이식한 졸업 프로젝트.
-                  기술적 복잡성을 사용자 친화적인 웹 인터페이스로 재가공했습니다.
+                  [졸업프로젝트] WASM 기반의 고성능 Zero-Client 원격 데스크톱 보안 솔루션.
+                  서버 부하 문제를 해결하고 복잡한 Rust 시스템을 브라우저 네이티브 환경으로 최적화했습니다.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
-                  {['Rust', 'WebAssembly', 'Security'].map(tag => (
+                  {['React', 'Rust/WASM', 'Full-Stack', '1-person'].map(tag => (
                     <span key={tag} className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-100 rounded text-zinc-500">{tag}</span>
                   ))}
                 </div>
@@ -108,11 +107,11 @@ export default function PortfolioPage() {
               </div>
               <div className="space-y-2 px-1">
                 <p className="text-zinc-600 text-sm leading-relaxed">
-                  사회적 취약점 개선을 위한 솔루션 개발 및 코엑스 컨퍼런스 발표.
-                  2년간의 점진적 개선을 통해 임팩트를 측정하고 검증했습니다.
+                  [카카오임팩트] 재난 안전 교육의 물리적 한계를 깨는 게이미피케이션 플랫폼.
+                  기술 기획(PM)과 풀스택 개발에 참여하며 두 단계에 걸쳐 상용화 수준으로 고도화했습니다.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
-                  {['React', 'Social Impact', 'Data Analysis'].map(tag => (
+                  {['SolidJS', 'React', 'Tech PM', '10+ members'].map(tag => (
                     <span key={tag} className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-100 rounded text-zinc-500">{tag}</span>
                   ))}
                 </div>
@@ -135,11 +134,11 @@ export default function PortfolioPage() {
               </div>
               <div className="space-y-2 px-1">
                 <p className="text-zinc-600 text-sm leading-relaxed">
-                  스노보드 동아리 운영 자동화를 위한 풀스택 웹 서비스.
-                  기획부터 베타테스팅, 실제 운영까지 제품 전 과정을 리딩했습니다.
+                  [사이드프로젝트] 연합 스노보드 동아리 운영의 페인포인트를 해결하는 수익형 플랫폼.
+                  기획부터 개발까지 전 과정을 주도하며 대규모 트래픽 환경의 동시성 및 데이터 정합성 문제를 해결했습니다.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
-                  {['Next.js', 'Vercel', 'PostgreSQL'].map(tag => (
+                  {['React', 'Spring Boot', 'Product Owner', '2-people'].map(tag => (
                     <span key={tag} className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-100 rounded text-zinc-500">{tag}</span>
                   ))}
                 </div>
@@ -178,16 +177,22 @@ export default function PortfolioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-4">
               <h3 className="text-xs uppercase tracking-widest font-bold text-zinc-400">Philosophy</h3>
-              <p className="text-zinc-600 text-sm leading-relaxed">
-                "기술은 문제를 해결할 때 가장 아름답다"고 믿습니다.
-                코드 한 줄이 비즈니스 지표에 미치는 영향을 고민하며 개발합니다.
+              <p className="text-zinc-600 text-sm leading-relaxed whitespace-pre-line">
+                {`EXPERIENCE-DRIVEN INSIGHT
+"경험은 관찰을 낳고, 관찰은 통찰이 되어 비로소 세상에 필요한 기술이 됩니다."
+
+단순히 코드를 구현하는 것을 넘어, 현장에 대한 깊은 관찰로 문제의 본질을 꿰뚫는 것을 즐깁니다. 저는 대학 생활 동안 스노보드 동아리 운영부터 KAIST에서의 전산학 연구까지 경계 없는 경험을 쌓으며, 수많은 데이터 포인트를 연결해 세상을 바라보는 고유한 통찰력을 길러왔습니다.
+
+엔지니어링의 정교함과 기획자의 전략적 시각을 바탕으로 기술과 세상 사이의 다리를 놓습니다. 제가 가진 기술적 판단력으로 복잡한 비효율을 걷어내고 세상을 더 살기 좋은 곳으로 바꾸는 것, 그것은 제게 가장 큰 성취이자 즐거움입니다.`}
               </p>
             </div>
             <div className="space-y-4">
               <h3 className="text-xs uppercase tracking-widest font-bold text-zinc-400">Leadership</h3>
-              <p className="text-zinc-600 text-sm leading-relaxed">
-                다양한 팀 프로젝트에서 기획 리드와 팀장을 맡아
-                베타테스팅 성공과 컨퍼런스 발표를 이끌어냈습니다.
+              <p className="text-zinc-600 text-sm leading-relaxed whitespace-pre-line">
+                {`OBSERVATION-LED STEWARDSHIP
+"팀을 향한 깊은 관찰은 최적의 조율을 낳고, 이는 곧 프로젝트를 끝까지 완수해내는 실천적 책임이 됩니다."
+
+저에게 리더십은 구성원 개개인의 역량과 팀의 병목을 세밀하게 관찰하여, 모두가 본연의 전문성에 몰입할 수 있는 환경을 설계하는 과정입니다. 다수의 단체를 운영하고 프로젝트를 이끌며 다양한 이해관계자 사이 간극을 메우는 조율자로 활동해왔으며, 이 과정에서 얻은 통찰을 바탕으로 팀의 에너지를 하나의 목표로 결집합니다. 어떤 변수 속에서도 프로젝트를 끝까지 완수해내는 강력한 오너십은, 제가 수많은 경험을 통해 체득한 리더로서의 가장 핵심적인 본질입니다.`}
               </p>
             </div>
           </div>
@@ -267,8 +272,10 @@ export default function PortfolioPage() {
       {/* 5. Footer */}
       <footer className="bg-zinc-50 py-20 border-t border-zinc-100">
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
-          <h2 className="text-2xl font-bold tracking-tight">함께 가치를 만들 준비가 되셨나요?</h2>
-          <p className="text-zinc-500">새로운 도전을 위한 커피챗은 언제나 환영입니다.</p>
+          <h2 className="text-2xl font-bold tracking-tight">"어제보다 더 나은 솔루션을 위해 고민하는 동료를 찾으시나요?"</h2>
+          <p className="text-zinc-500 whitespace-pre-line">
+            새로운 기술적 도전이나 가치를 만드는 프로젝트 제안은 언제나 환영입니다. 가벼운 커피챗부터 깊이 있는 기술 토크까지, 소중한 만남을 기다립니다.
+          </p>
           <a href="mailto:jaybin7@gmail.com" className="inline-block bg-zinc-900 text-white px-8 py-3 rounded-full font-medium hover:bg-zinc-800 transition-colors">
             Get in Touch
           </a>

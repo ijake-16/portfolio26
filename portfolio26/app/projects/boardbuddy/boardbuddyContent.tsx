@@ -43,8 +43,8 @@ export default function BoardbuddyContent() {
                         </p>
                     </div>
                     <div className="flex items-center gap-3">
-                        <button onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')} className="px-5 py-2.5 rounded-2xl bg-zinc-900 text-white font-bold hover:scale-105 transition-transform shadow-lg shadow-zinc-200">
-                            {lang === 'ko' ? 'English Version' : '한국어로 보기'}
+                        <button onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')} className="px-4 py-2 rounded-xl bg-zinc-900 text-white text-sm font-bold hover:bg-zinc-800 transition-all">
+                            {lang === 'ko' ? 'EN' : 'KO'}
                         </button>
                     </div>
                 </div>
