@@ -17,16 +17,26 @@ export default function TechForImpactContent() {
         <div className="space-y-20 pb-20">
             {/* Header Section */}
             <section className="space-y-8">
-                <div className="aspect-[21/9] bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 rounded-[2rem] overflow-hidden relative flex items-center justify-center shadow-2xl">
+                <div className="aspect-[21/9] bg-[#FEF08A] rounded-[2rem] overflow-hidden relative flex items-center justify-center shadow-lg border border-yellow-300">
+                    <svg className="absolute inset-0 w-full h-full object-cover opacity-80" preserveAspectRatio="xMidYMid slice" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+                        {/* Abstract Yellow/Green Impact/Safety Background */}
+                        <path d="M0 0 L250 0 L150 225 L0 225 Z" fill="#FDE047" />
+                        <rect x="180" y="20" width="140" height="140" rx="32" fill="#EAB308" transform="rotate(15 250 90)" />
+                        <circle cx="120" cy="130" r="80" fill="#16A34A" />
+                        <circle cx="120" cy="130" r="32" fill="#FEF08A" />
+                        <path d="M260 225 L340 60 L420 225 Z" fill="#22C55E" />
+                        <rect x="40" y="40" width="40" height="80" fill="#CA8A04" />
+                        <circle cx="340" cy="60" r="20" fill="#15803D" />
+                    </svg>
+                    <div className="absolute inset-0 bg-zinc-900/60 mix-blend-multiply backdrop-blur-[2px]"></div>
                     <div className="text-center space-y-4 px-6 relative z-10">
-                        <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tighter italic">
+                        <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tighter italic drop-shadow-lg">
                             TECH FOR IMPACT
                         </h2>
-                        <p className="text-white/80 font-medium text-lg">
+                        <p className="text-zinc-100 font-medium text-lg drop-shadow-md">
                             {lang === 'ko' ? '재난 안전 교육의 한계를 깨는 게이미피케이션 플랫폼' : 'Breaking Boundaries in Disaster Safety Education through Gamification'}
                         </p>
                     </div>
-                    <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px]"></div>
                 </div>
 
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -38,7 +48,7 @@ export default function TechForImpactContent() {
                         <button onClick={toggleLang} className="px-4 py-2 rounded-xl bg-zinc-900 text-white text-sm font-bold hover:bg-zinc-800 transition-all">
                             {lang === 'ko' ? 'EN' : 'KO'}
                         </button>
-                        <a href="#" className="p-2.5 rounded-xl border border-zinc-200 text-zinc-600 hover:bg-zinc-50 transition-colors">
+                        <a href="https://gbs.bttf.kr/" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl border border-zinc-200 text-zinc-600 hover:bg-zinc-50 transition-colors" title="Open Live Demo">
                             <ExternalLink size={20} />
                         </a>
                     </div>
@@ -74,13 +84,23 @@ export default function TechForImpactContent() {
 
             {/* Phase 1: Deep Dive */}
             <section className="space-y-10 border-t border-zinc-100 pt-16">
-                <div className="flex items-center gap-4">
+                <div className="flex items-start gap-4">
                     <span className="text-5xl font-black text-zinc-100 italic">01</span>
-                    <div>
+                    <div className="flex-1 space-y-3">
                         <h2 className="text-sm uppercase tracking-widest font-bold text-indigo-500">Phase 1: Tech for Impact Campus (2025년) (MVP)</h2>
                         <h3 className="text-2xl font-bold text-zinc-900">
                             {lang === 'ko' ? 'Zero to One: 가설 검증과 빠른 구현' : 'Zero to One: Hypothesis Testing & Rapid Prototyping'}
                         </h3>
+                        <a
+                            href="https://techforimpact.io/campus/project?page=0&selectedId=19"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-600 text-xs font-bold tracking-wide transition-all group w-fit"
+                        >
+                            <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
+                            {lang === 'ko' ? '캠퍼스 단계 프로젝트 보기' : 'View Campus Stage Project'}
+                            <ExternalLink size={12} className="opacity-60 group-hover:opacity-100 transition-opacity" />
+                        </a>
                     </div>
                 </div>
 
@@ -135,13 +155,23 @@ export default function TechForImpactContent() {
 
             {/* Phase 2: Deep Dive */}
             <section className="space-y-10 border-t border-zinc-100 pt-16">
-                <div className="flex items-center gap-4">
+                <div className="flex items-start gap-4">
                     <span className="text-5xl font-black text-zinc-100 italic">02</span>
-                    <div>
+                    <div className="flex-1 space-y-3">
                         <h2 className="text-sm uppercase tracking-widest font-bold text-purple-500">Phase 2: Tech For Impact Lab (2기) (Scale-up)</h2>
                         <h3 className="text-2xl font-bold text-zinc-900">
                             {lang === 'ko' ? 'Professionalism: 시스템 고도화 및 리팩토링' : 'Professionalism: System Scale-Up & Refactoring'}
                         </h3>
+                        <a
+                            href="https://techforimpact.io/lab/project/16"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100 border border-purple-200 text-purple-600 text-xs font-bold tracking-wide transition-all group w-fit"
+                        >
+                            <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
+                            {lang === 'ko' ? '랩 단계 프로젝트 보기' : 'View Lab Stage Project'}
+                            <ExternalLink size={12} className="opacity-60 group-hover:opacity-100 transition-opacity" />
+                        </a>
                     </div>
                 </div>
 
@@ -242,12 +272,17 @@ export default function TechForImpactContent() {
 
             {/* Call to Action or Footer */}
             <footer className="pt-20 text-center">
-                <div className="inline-flex items-center gap-2 text-zinc-400 font-medium hover:text-zinc-600 transition-colors cursor-pointer">
+                <a
+                    href="https://gbs.bttf.kr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2.5 px-6 py-3 rounded-2xl bg-zinc-900 text-white font-semibold hover:bg-zinc-700 shadow-lg hover:shadow-xl transition-all group"
+                >
                     <span>
-                        {lang === 'ko' ? '이 프로젝트에 대해 더 자세히 이야기하고 싶으신가요?' : 'Want to learn more about this project?'}
+                        {lang === 'ko' ? '라이브 서비스 바로가기' : 'Visit Live Service'}
                     </span>
-                    <ArrowRight size={16} />
-                </div>
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </a>
             </footer>
         </div>
     );

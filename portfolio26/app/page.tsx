@@ -65,13 +65,23 @@ export default function PortfolioPage() {
 
             {/* Card 1: Rust 보안 프로젝트 */}
             <Link href="/projects/rdp" className="group space-y-4 block">
-              <div className="aspect-video bg-zinc-900 rounded-2xl overflow-hidden relative">
-                <ShieldCheck className="absolute top-6 right-6 text-zinc-800" size={80} />
+              <div className="aspect-video rounded-2xl overflow-hidden relative bg-[#09090B] border border-zinc-800 group-hover:shadow-[0_8px_30px_rgba(220,38,38,0.2)] transition-all duration-500 group-hover:-translate-y-1">
+                <svg className="absolute inset-0 w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+                  {/* Abstract Red/Black Security */}
+                  <rect x="-50" y="0" width="250" height="225" fill="#18181B" />
+                  <circle cx="180" cy="112" r="90" fill="#991B1B" />
+                  <path d="M260 225 L350 40 L440 225 Z" fill="#000000" />
+                  <circle cx="350" cy="40" r="24" fill="#DC2626" />
+                  <circle cx="350" cy="40" r="8" fill="#FFFFFF" />
+                  <rect x="60" y="40" width="60" height="60" rx="16" fill="#EF4444" />
+                  <rect x="0" y="160" width="120" height="30" fill="#7F1D1D" />
+                </svg>
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/50 to-transparent" />
                 <div className="absolute inset-0 flex items-end p-5">
-                  <div className="space-y-1">
+                  <div className="space-y-1 w-full">
                     <div className="flex items-center justify-between w-full">
                       <h3 className="text-lg font-bold text-white">Rust Security RDP</h3>
-                      <ExternalLink size={15} className="text-zinc-500" />
+                      <ExternalLink size={15} className="text-red-400" />
                     </div>
                   </div>
                 </div>
@@ -93,15 +103,22 @@ export default function PortfolioPage() {
 
             {/* Card 2: 카카오 임팩트 */}
             <Link href="/projects/bttf" className="group space-y-3 block">
-              <div className="aspect-video bg-zinc-100 rounded-2xl overflow-hidden relative">
-                <div className="absolute inset-0 flex items-center justify-center text-zinc-300 group-hover:scale-110 transition-transform duration-500">
-                  <Code2 size={48} strokeWidth={1} />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-200/80 to-transparent" />
+              <div className="aspect-video rounded-2xl overflow-hidden relative bg-[#FEF08A] border border-yellow-300 group-hover:shadow-[0_8px_30px_rgba(234,179,8,0.3)] transition-all duration-500 group-hover:-translate-y-1">
+                <svg className="absolute inset-0 w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+                  {/* Abstract Yellow/Green Impact/Safety */}
+                  <path d="M0 0 L250 0 L150 225 L0 225 Z" fill="#FDE047" />
+                  <rect x="180" y="20" width="140" height="140" rx="32" fill="#EAB308" transform="rotate(15 250 90)" />
+                  <circle cx="120" cy="130" r="80" fill="#16A34A" />
+                  <circle cx="120" cy="130" r="32" fill="#FEF08A" />
+                  <path d="M260 225 L340 60 L420 225 Z" fill="#22C55E" />
+                  <rect x="40" y="40" width="40" height="80" fill="#CA8A04" />
+                  <circle cx="340" cy="60" r="20" fill="#15803D" />
+                </svg>
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/40 to-transparent" />
                 <div className="absolute inset-0 flex items-end p-5">
                   <div className="flex items-center justify-between w-full">
-                    <h3 className="text-lg font-bold text-zinc-800">Tech for Impact</h3>
-                    <ExternalLink size={15} className="text-zinc-500" />
+                    <h3 className="text-lg font-bold text-white">Tech for Impact</h3>
+                    <ExternalLink size={15} className="text-green-400" />
                   </div>
                 </div>
               </div>
@@ -120,15 +137,22 @@ export default function PortfolioPage() {
 
             {/* Card 3: 보드버디 */}
             <Link href="/projects/boardbuddy" className="group space-y-3 block">
-              <div className="aspect-video bg-zinc-100 rounded-2xl overflow-hidden relative">
-                <div className="absolute inset-0 flex items-center justify-center text-zinc-300 group-hover:scale-110 transition-transform duration-500">
-                  <Rocket size={48} strokeWidth={1} />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-200/80 to-transparent" />
+              <div className="aspect-video rounded-2xl overflow-hidden relative bg-[#EFF6FF] border border-blue-100 group-hover:shadow-[0_8px_30px_rgba(59,130,246,0.3)] transition-all duration-500 group-hover:-translate-y-1">
+                <svg className="absolute inset-0 w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+                  {/* Abstract Blue/White Wintersports */}
+                  <path d="M120 225 L320 0 L450 100 L450 225 Z" fill="#BFDBFE" />
+                  <path d="M-50 225 L150 -50 L350 150 L450 225 Z" fill="#FFFFFF" />
+                  <path d="M0 225 L200 40 L400 225 Z" fill="#60A5FA" />
+                  <rect x="160" y="70" width="120" height="24" rx="12" fill="#2563EB" transform="rotate(30 220 82)" />
+                  <circle cx="80" cy="80" r="48" fill="#93C5FD" />
+                  <circle cx="80" cy="80" r="16" fill="#EFF6FF" />
+                  <circle cx="280" cy="40" r="16" fill="#1D4ED8" />
+                </svg>
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/40 to-transparent" />
                 <div className="absolute inset-0 flex items-end p-5">
                   <div className="flex items-center justify-between w-full">
-                    <h3 className="text-lg font-bold text-zinc-800">Boardbuddy</h3>
-                    <ExternalLink size={15} className="text-zinc-500" />
+                    <h3 className="text-lg font-bold text-white">Boardbuddy</h3>
+                    <ExternalLink size={15} className="text-blue-300" />
                   </div>
                 </div>
               </div>

@@ -36,15 +36,16 @@ export default function WebVDIContent() {
                     <div className="space-y-3">
                         <h1 className="text-5xl font-extrabold tracking-tight text-zinc-900 italic">Modernizing VDI</h1>
                         <p className="text-zinc-500 text-lg font-medium flex items-center gap-2">
-                            <Terminal size={18} /> React 19 + Rust/WASM + TypeScript
+                            2025 Fall Semester
                         </p>
                     </div>
                     <div className="flex items-center gap-3">
                         <button onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')} className="px-4 py-2 rounded-xl bg-zinc-900 text-white text-sm font-bold hover:bg-zinc-800 transition-all">
                             {lang === 'ko' ? 'EN' : 'KO'}
                         </button>
-                        <a href="https://github.com/Devolutions/IronRDP" target="_blank" className="p-3 rounded-2xl bg-zinc-900 text-white hover:bg-zinc-800 transition-colors">
-                            <ExternalLink size={20} />
+                        <a href="https://github.com/ijake-16/IronRDP/tree/jake_master" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-zinc-900 text-white hover:bg-zinc-800 transition-colors text-sm font-bold">
+                            <ExternalLink size={16} />
+                            GitHub
                         </a>
                     </div>
                 </div>
@@ -255,7 +256,54 @@ export default function WebVDIContent() {
                 </div>
             </section>
 
-            {/* 5. Closing: Engineering Mentality */}
+            {/* 5. Final Presentation Poster */}
+            <section className="border-t border-zinc-100 pt-16 space-y-10">
+                <div className="flex items-start justify-between gap-6 flex-wrap">
+                    <div className="space-y-2">
+                        <h2 className="text-xs uppercase tracking-widest font-bold text-zinc-400">Final Presentation</h2>
+                        <h3 className="text-4xl font-black text-zinc-900 tracking-tight">Project Poster</h3>
+                        <p className="text-zinc-500 text-sm">
+                            {lang === 'ko' ? 'KAIST 전산학부 최종 발표 포스터' : 'KAIST School of Computing Final Presentation Poster'}
+                        </p>
+                    </div>
+                    <a
+                        href="/rdp-poster.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-zinc-900 text-white font-bold text-sm hover:bg-zinc-700 transition-all shadow-lg hover:shadow-xl group"
+                    >
+                        <ExternalLink size={16} className="group-hover:scale-110 transition-transform" />
+                        {lang === 'ko' ? '새 탭에서 열기' : 'Open Full Screen'}
+                    </a>
+                </div>
+
+                <div className="relative w-full rounded-[2rem] overflow-hidden border border-zinc-200 shadow-xl bg-zinc-50" style={{ height: '70vh', minHeight: '500px' }}>
+                    <object
+                        data="/rdp-poster.pdf"
+                        type="application/pdf"
+                        className="w-full h-full"
+                        aria-label="RDP Project Final Poster"
+                    >
+                        {/* Native fallback: shown when browser cannot render PDF */}
+                        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                            <FileText size={48} className="text-zinc-300" />
+                            <p className="text-zinc-500 font-medium text-sm">
+                                {lang === 'ko' ? '이 브라우저에서는 PDF를 직접 표시할 수 없습니다.' : 'Your browser cannot display PDF files inline.'}
+                            </p>
+                            <a
+                                href="/rdp-poster.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-5 py-2.5 bg-zinc-900 text-white rounded-xl font-semibold text-sm hover:bg-zinc-700 transition-colors"
+                            >
+                                {lang === 'ko' ? '포스터 열기' : 'Open Poster'}
+                            </a>
+                        </div>
+                    </object>
+                </div>
+            </section>
+
+            {/* 6. Closing: Engineering Mentality */}
             <section className="bg-zinc-900 rounded-[3rem] p-12 md:p-20 text-center space-y-8 shadow-2xl">
                 <h3 className="text-3xl font-bold text-white">Engineering Rigor for Open Source</h3>
                 <div className="max-w-3xl mx-auto text-zinc-400 leading-relaxed italic">

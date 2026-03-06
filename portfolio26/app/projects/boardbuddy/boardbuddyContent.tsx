@@ -36,7 +36,7 @@ export default function BoardbuddyContent() {
                     <div className="space-y-3">
                         <div className="flex items-center gap-3">
                             <h1 className="text-5xl font-extrabold tracking-tight text-zinc-900">보드버디</h1>
-                            <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-black rounded-full uppercase">Beta Version 1.0</span>
+                            <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-black rounded-full uppercase">Beta Version 0.6</span>
                         </div>
                         <p className="text-zinc-500 text-lg font-medium flex items-center gap-2">
                             <Calendar size={18} /> 2025.11 – Present (Next Season Launching)
