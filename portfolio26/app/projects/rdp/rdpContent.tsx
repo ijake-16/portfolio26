@@ -24,11 +24,18 @@ export default function WebVDIContent() {
                         <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tighter uppercase leading-none">
                             IronRDP WebVDI
                         </h2>
-                        <p className="text-zinc-400 font-medium text-lg sm:text-xl max-w-3xl mx-auto">
-                            {lang === 'ko'
-                                ? 'WASM 기반의 고성능 Zero-Client 원격 데스크톱 솔루션'
-                                : 'High-Performance WebAssembly-based Zero-Client RDP Interface'}
-                        </p>
+                        <div className="space-y-2">
+                            <p className="text-zinc-300 font-bold text-lg sm:text-xl max-w-3xl mx-auto">
+                                {lang === 'ko'
+                                    ? 'Rust-on-React 아키텍처 기반 Zero-Client 원격 데스크톱'
+                                    : 'Rust-on-React Architecture for Zero-Client Remote Desktop'}
+                            </p>
+                            <p className="text-zinc-500 font-medium text-sm sm:text-base max-w-2xl mx-auto">
+                                {lang === 'ko'
+                                    ? 'Rust 기반 RDP 보안 시스템을 WASM으로 컴파일하여 브라우저 환경에 완벽하게 이식했습니다.'
+                                    : 'Compiled a Rust-based RDP security system into WASM, flawlessly embedding it into the browser environment.'}
+                            </p>
+                        </div>
                     </div>
                 </div>
 

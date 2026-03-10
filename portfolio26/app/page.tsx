@@ -80,7 +80,7 @@ export default function PortfolioPage() {
                 <div className="absolute inset-0 flex items-end p-5">
                   <div className="space-y-1 w-full">
                     <div className="flex items-center justify-between w-full">
-                      <h3 className="text-lg font-bold text-white">Rust Security RDP</h3>
+                      <h3 className="text-lg font-bold text-white">Zero-Client WebVDI</h3>
                       <ExternalLink size={15} className="text-red-400" />
                     </div>
                   </div>
@@ -88,8 +88,8 @@ export default function PortfolioPage() {
               </div>
               <div className="space-y-2">
                 <p className="text-zinc-600 text-sm leading-relaxed">
-                  [졸업프로젝트] WASM 기반의 고성능 Zero-Client 원격 데스크톱 보안 솔루션.
-                  서버 부하 문제를 해결하고 복잡한 Rust 시스템을 브라우저 네이티브 환경으로 최적화했습니다.
+                  [졸업프로젝트] Rust-on-React 아키텍처로 구현한 차세대 Zero-Client 원격 데스크톱.
+                  Rust 기반 RDP 보안 시스템을 WASM으로 컴파일하여 브라우저에 이식하고, 뷰포트 기반 실시간 해상도 자동 협상(Auto-negotiation)등의 기능을 통해 별도의 설치 없이도 네이티브 수준의 지연 없는 원격 경험을 제공합니다.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
                   {['React', 'Rust/WASM', 'Full-Stack', '1-person'].map(tag => (
@@ -159,7 +159,7 @@ export default function PortfolioPage() {
               <div className="space-y-2 px-1">
                 <p className="text-zinc-600 text-sm leading-relaxed">
                   [사이드프로젝트] 연합 스노보드 동아리 운영의 페인포인트를 해결하는 수익형 플랫폼.
-                  기획부터 개발까지 전 과정을 주도하며 대규모 트래픽 환경의 동시성 및 데이터 정합성 문제를 해결했습니다.
+                  기획부터 개발까지 전 과정을 주도하며 대규모 트래픽 환경의 동시성 및 데이터 정합성 문제를 해결했습니다. 현재 베타테스팅중
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
                   {['React', 'Spring Boot', 'Product Owner', '2-people'].map(tag => (
@@ -205,7 +205,7 @@ export default function PortfolioPage() {
                 {`EXPERIENCE-DRIVEN INSIGHT
 "경험은 관찰을 낳고, 관찰은 통찰이 되어 비로소 세상에 필요한 기술이 됩니다."
 
-단순히 코드를 구현하는 것을 넘어, 현장에 대한 깊은 관찰로 문제의 본질을 꿰뚫는 것을 즐깁니다. 저는 대학 생활 동안 스노보드 동아리 운영부터 KAIST에서의 전산학 연구까지 경계 없는 경험을 쌓으며, 수많은 데이터 포인트를 연결해 세상을 바라보는 고유한 통찰력을 길러왔습니다.
+단순히 코드를 구현하는 것을 넘어, 현장에 대한 깊은 관찰로 문제의 본질을 꿰뚫는 것을 즐깁니다. 저는 대학 생활 동안 다양한 동아리 운영부터 KAIST에서의 전산학 연구까지 경계 없는 경험을 쌓으며, 수많은 데이터 포인트를 연결해 세상을 바라보는 고유한 통찰력을 길러왔습니다.
 
 엔지니어링의 정교함과 기획자의 전략적 시각을 바탕으로 기술과 세상 사이의 다리를 놓습니다. 제가 가진 기술적 판단력으로 복잡한 비효율을 걷어내고 세상을 더 살기 좋은 곳으로 바꾸는 것, 그것은 제게 가장 큰 성취이자 즐거움입니다.`}
               </p>
