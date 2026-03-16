@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Github, Mail, ExternalLink, Code2, Rocket, ShieldCheck } from 'lucide-react';
+import { Github, Mail, ExternalLink, Code2, Rocket, ShieldCheck, ChevronDown } from 'lucide-react';
 import EducationCard from '@/components/EducationCard';
 import Orb from '@/components/Orb';
 
@@ -21,7 +21,10 @@ export default function PortfolioPage() {
       {/* 1. Navigation: 아주 최소한의 정보만 담은 상단 바 */}
       <nav className="sticky top-0 z-50 bg-white/60 backdrop-blur-md border-b border-zinc-100/60">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="font-bold tracking-tighter text-xl">JAKE.DEV</span>
+          <div className="flex items-center gap-2">
+            <img src="/apple-touch-icon.png" alt="JAKE.DEV Logo" className="w-8 h-8 rounded-lg shadow-sm" />
+            <span className="font-bold tracking-tighter text-xl">JAKE.DEV</span>
+          </div>
           <div className="flex gap-6 text-sm font-medium text-zinc-500">
             <a href="#projects" className="hover:text-zinc-900 transition-colors">Projects</a>
             <a href="#about" className="hover:text-zinc-900 transition-colors">About</a>
@@ -39,7 +42,7 @@ export default function PortfolioPage() {
             <span className="text-zinc-400">& Developer.</span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-600 max-w-2xl leading-snug break-keep">
-            탄탄한 이공학적 근거로 기술적 한계를 비즈니스로 치환하고, 구현을 넘어 제품이 사용자에게 닿는 모든 순간을 책임집니다.
+            심도 있는 이공학적 전문성을 통해 '기술적 가능성'을 최적의 제품 경험으로 구현해 냅니다. 기능 구현을 넘어, 사용자가 제품을 만나는 모든 순간의 완성도를 고민하고 관리합니다.
           </p>
           <div className="flex gap-4 pt-4">
             <a href="https://github.com/ijake-16" className="p-2 rounded-full border border-zinc-200 hover:bg-zinc-50 transition-all">
@@ -172,22 +175,33 @@ export default function PortfolioPage() {
           </div>
 
           {/* Other Projects: list view */}
-          <div className="space-y-0 border-t border-zinc-100">
-            <p className="text-xs uppercase tracking-widest font-bold text-zinc-400 py-4">Other Projects</p>
-            {[
-              { title: 'Project Title A', year: '2025', desc: '한 줄 설명을 여기에 작성하세요.' },
-              { title: 'Project Title B', year: '2024', desc: '한 줄 설명을 여기에 작성하세요.' },
-              { title: 'Project Title C', year: '2024', desc: '한 줄 설명을 여기에 작성하세요.' },
-              { title: 'Project Title D', year: '2023', desc: '한 줄 설명을 여기에 작성하세요.' },
-            ].map((p) => (
-              <div key={p.title} className="group flex items-baseline gap-6 py-4 border-b border-zinc-100 hover:bg-zinc-50 -mx-2 px-2 rounded transition-colors cursor-pointer">
-                <span className="text-xs text-zinc-400 tabular-nums w-10 shrink-0">{p.year}</span>
-                <span className="font-semibold text-sm flex-1">{p.title}</span>
-                <span className="text-zinc-500 text-sm hidden md:block">{p.desc}</span>
-                <ExternalLink size={13} className="text-zinc-300 group-hover:text-zinc-500 transition-colors shrink-0" />
-              </div>
-            ))}
-          </div>
+          <details className="group border-t border-zinc-100">
+            <summary className="flex items-center justify-between cursor-pointer list-none py-4 outline-none [&::-webkit-details-marker]:hidden">
+              <p className="text-xs uppercase tracking-widest font-bold text-zinc-400">Other Projects</p>
+              <ChevronDown size={16} className="text-zinc-400 transition-transform duration-300 group-open:rotate-180" />
+            </summary>
+            <div className="pb-4">
+              {[
+                { title: 'PintOS', year: '2024', desc: '[Core OS 구현] 스탠퍼드 대학교 교육용 프레임워크 기반. 멀티스레딩, 가상 메모리 등 범용 운영체제 핵심 로직 설계 및 C언어 구현' },
+                { title: 'AI SLAM Robot', year: '2023', desc: '[재난 방재 자율주행 모빌리티] 소방 인력 생존율 개선 목적. TurtleBot 기반 라이다 센서 및 부분 자율주행 알고리즘을 결합한 실시간 화재 내부 구조 SLAM 라우팅 파이프라인 구축' },
+                { title: 'Ethics Writing Extension', year: '2023', desc: '[윤리적 텍스트 교정 크롬 확장 앱] 기술 윤리 문제 개선 목적. 비윤리적이거나 편향된 웹 텍스트 입력 감지 및 올바른 방향성에 대한 사용자 실시간 교정 가이드 도구 제공' },
+                { title: 'Bioinformatics ProbeDNA Finder', year: '2022', desc: '[유전자 염기서열 추천 시스템] 아데노바이러스 진단 정확도 개선 목적. 대규모 유전체 데이터(DNA) 내 최적의 바이오센싱 프로브 시퀀스를 추출하는 데이터 마이닝 파이썬 스크립트 개발' },
+                { title: 'Adenovirus Quantitative Sensor', year: '2019', desc: '[현장 진단용 전기화학 바이오센서] 기존 결막염 바이러스 진단 비용/시간 한계 극복. 타겟 단백질 반응 시 신속하고 정량적인 측정이 가능한 센서 프로토타입 연구 및 구현 (고교 졸업 논문)' },
+                { title: 'Biomimetic Superomniphobic Surface', year: '2018', desc: '[구조적 자가세척(연잎 효과) 나노 표면연구] 산업 표면 오염 제약 해결 목적. 물체 표면 장력 메커니즘을 응용해 물과 기름을 튕겨내는 마이크로 구조 생체모방 입자 표면 설계 (고교 R&E)' },
+              ].map((p) => (
+                <div key={p.title} className="group/item flex flex-col gap-1 py-4 border-b border-zinc-100 hover:bg-zinc-50 -mx-2 px-2 rounded transition-colors cursor-pointer">
+                  <div className="flex items-baseline gap-6 w-full">
+                    <span className="text-xs text-zinc-400 tabular-nums w-10 shrink-0">{p.year}</span>
+                    <span className="font-semibold text-sm flex-1">{p.title}</span>
+                    <ExternalLink size={13} className="text-zinc-300 group-hover/item:text-zinc-500 transition-colors shrink-0" />
+                  </div>
+                  <div className="flex justify-end pl-16">
+                    <span className="text-zinc-500 text-sm text-right break-keep leading-relaxed">{p.desc}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </details>
 
         </section>
 
@@ -201,23 +215,30 @@ export default function PortfolioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-4">
               <h3 className="text-xs uppercase tracking-widest font-bold text-zinc-400">Philosophy</h3>
-              <p className="text-zinc-600 text-sm leading-relaxed whitespace-pre-line">
-                {`EXPERIENCE-DRIVEN INSIGHT
-"경험은 관찰을 낳고, 관찰은 통찰이 되어 비로소 세상에 필요한 기술이 됩니다."
-
-단순히 코드를 구현하는 것을 넘어, 현장에 대한 깊은 관찰로 문제의 본질을 꿰뚫는 것을 즐깁니다. 저는 대학 생활 동안 다양한 동아리 운영부터 KAIST에서의 전산학 연구까지 경계 없는 경험을 쌓으며, 수많은 데이터 포인트를 연결해 세상을 바라보는 고유한 통찰력을 길러왔습니다.
-
-엔지니어링의 정교함과 기획자의 전략적 시각을 바탕으로 기술과 세상 사이의 다리를 놓습니다. 제가 가진 기술적 판단력으로 복잡한 비효율을 걷어내고 세상을 더 살기 좋은 곳으로 바꾸는 것, 그것은 제게 가장 큰 성취이자 즐거움입니다.`}
-              </p>
+              <div className="text-zinc-600 text-sm leading-relaxed space-y-4">
+                <div>
+                  <h4 className="font-bold text-zinc-900 text-base tracking-wide">EXPERIENCE-DRIVEN INSIGHT</h4>
+                  <p className="italic text-zinc-500 mt-1">"경험은 관찰을 낳고, 관찰은 통찰이 되어 비로소 세상에 필요한 기술이 됩니다."</p>
+                </div>
+                <p>
+                  단순히 코드를 구현하는 것을 넘어, 현장에 대한 깊은 관찰로 문제의 본질을 꿰뚫는 것을 즐깁니다. 저는 대학 생활 동안 다양한 동아리 운영부터 KAIST에서의 전산학 연구까지 경계 없는 경험을 쌓으며, 수많은 데이터 포인트를 연결해 세상을 바라보는 고유한 통찰력을 길러왔습니다.
+                </p>
+                <p>
+                  엔지니어링의 정교함과 기획자의 전략적 시각을 바탕으로 기술과 세상 사이의 다리를 놓습니다. 제가 가진 기술적 판단력으로 복잡한 비효율을 걷어내고 세상을 더 살기 좋은 곳으로 바꾸는 것, 그것은 제게 가장 큰 성취이자 즐거움입니다.
+                </p>
+              </div>
             </div>
             <div className="space-y-4">
               <h3 className="text-xs uppercase tracking-widest font-bold text-zinc-400">Leadership</h3>
-              <p className="text-zinc-600 text-sm leading-relaxed whitespace-pre-line">
-                {`OBSERVATION-LED STEWARDSHIP
-"팀을 향한 깊은 관찰은 최적의 조율을 낳고, 이는 곧 프로젝트를 끝까지 완수해내는 실천적 책임이 됩니다."
-
-저에게 리더십은 구성원 개개인의 역량과 팀의 병목을 세밀하게 관찰하여, 모두가 본연의 전문성에 몰입할 수 있는 환경을 설계하는 과정입니다. 다수의 단체를 운영하고 프로젝트를 이끌며 다양한 이해관계자 사이 간극을 메우는 조율자로 활동해왔으며, 이 과정에서 얻은 통찰을 바탕으로 팀의 에너지를 하나의 목표로 결집합니다. 어떤 변수 속에서도 프로젝트를 끝까지 완수해내는 강력한 오너십은, 제가 수많은 경험을 통해 체득한 리더로서의 가장 핵심적인 본질입니다.`}
-              </p>
+              <div className="text-zinc-600 text-sm leading-relaxed space-y-4">
+                <div>
+                  <h4 className="font-bold text-zinc-900 text-base">OBSERVATION-LED STEWARDSHIP</h4>
+                  <p className="italic">"팀을 향한 깊은 관찰은 최적의 조율을 낳고, 이는 곧 프로젝트를 끝까지 완수해내는 실천적 책임이 됩니다."</p>
+                </div>
+                <p>
+                  저에게 리더십은 구성원 개개인의 역량과 팀의 병목을 세밀하게 관찰하여, 모두가 본연의 전문성에 몰입할 수 있는 환경을 설계하는 과정입니다. 다수의 단체를 운영하고 프로젝트를 이끌며 다양한 이해관계자 사이 간극을 메우는 조율자로 활동해왔으며, 이 과정에서 얻은 통찰을 바탕으로 팀의 에너지를 하나의 목표로 결집합니다. 어떤 변수 속에서도 프로젝트를 끝까지 완수해내는 강력한 오너십은, 제가 수많은 경험을 통해 체득한 리더로서의 가장 핵심적인 본질입니다.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -236,9 +257,14 @@ export default function PortfolioPage() {
               </div>
               <div className="pt-2">
                 <h3 className="text-xs uppercase tracking-widest font-bold text-zinc-400 mb-3">Certification</h3>
-                <span className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-900 text-white rounded">
-                  정보처리기사 · 2025
-                </span>
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-900 text-white rounded">
+                    정보처리기사 · 2025
+                  </span>
+                  <span className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-zinc-900 text-white rounded">
+                    OPIc AL · 2025
+                  </span>
+                </div>
               </div>
             </div>
 
