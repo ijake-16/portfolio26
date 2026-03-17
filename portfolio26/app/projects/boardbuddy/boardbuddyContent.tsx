@@ -283,7 +283,7 @@ export default function BoardbuddyContent() {
                             # 사용자 중심의 서비스 운영
                         </h4>
                         <p className="text-zinc-600 leading-relaxed text-sm">
-                            개발자가 만들고 싶은 기능보다 **사용자가 현장에서 절실히 필요로 하는 기능(엑셀 추출, 모바일 가독성 등)**이 제품의 성패를 결정한다는 것을 뼈저리게 배웠습니다.
+                            개발자가 만들고 싶은 기능보다 사용자가 현장에서 절실히 필요로 하는 기능(엑셀 추출, 모바일 가독성 등)이 제품의 성패를 결정한다는 것을 뼈저리게 배웠습니다.
                         </p>
                     </div>
                     <div className="space-y-3">
@@ -291,7 +291,7 @@ export default function BoardbuddyContent() {
                             # 기술적 도전과 협업의 즐거움
                         </h4>
                         <p className="text-zinc-600 leading-relaxed text-sm">
-                            단순 프론트엔드 개발을 넘어, 백엔드/DevOps 팀원과 데이터 정합성 및 인프라 효율성을 논의하며 **전체 시스템의 관점에서 코드를 작성하는 역량**을 길렀습니다.
+                            단순 프론트엔드 개발을 넘어, 백엔드/DevOps 팀원과 데이터 정합성 및 인프라 효율성을 논의하며 전체 시스템의 관점에서 코드를 작성하는 역량을 길렀습니다.
                         </p>
                     </div>
                 </div>
