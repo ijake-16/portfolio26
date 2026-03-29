@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Github, Mail, ExternalLink, Code2, Rocket, ShieldCheck, ChevronDown } from 'lucide-react';
 import EducationCard from '@/components/EducationCard';
 import Orb from '@/components/Orb';
+import appleIcon from './apple-icon.png';
 
 export default function PortfolioPage() {
   return (
@@ -22,7 +23,7 @@ export default function PortfolioPage() {
       <nav className="sticky top-0 z-50 bg-white/60 backdrop-blur-md border-b border-zinc-100/60">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="/apple-touch-icon.png" alt="JAKE.DEV Logo" className="w-8 h-8 rounded-lg shadow-sm" />
+            <img src={appleIcon.src} alt="JAKE.DEV Logo" className="w-8 h-8 rounded-lg shadow-sm" />
             <span className="font-bold tracking-tighter text-xl">JAKE.DEV</span>
           </div>
           <div className="flex gap-6 text-sm font-medium text-zinc-500">
