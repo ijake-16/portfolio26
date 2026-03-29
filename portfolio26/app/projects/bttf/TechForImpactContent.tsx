@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react';
 import {
-    ExternalLink, Lightbulb, Zap, Users, CheckCircle2,
-    MessageSquare, TrendingUp, Code2, Database, Layout, ArrowRight
+    ExternalLink, Lightbulb, Users, CheckCircle2,
+    MessageSquare, Code2, Database, Layout, ArrowRight,
+    Calendar, Briefcase, Layers
 } from 'lucide-react';
 
 export default function TechForImpactContent() {
@@ -42,7 +43,6 @@ export default function TechForImpactContent() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <div className="space-y-2">
                         <h1 className="text-5xl font-extrabold tracking-tight text-zinc-900">Tech for Impact</h1>
-                        <p className="text-zinc-500 text-lg font-medium">2024.08 – 2026.01 (Full Cycle)</p>
                     </div>
                     <div className="flex items-center gap-3">
                         <button onClick={toggleLang} className="px-4 py-2 rounded-xl bg-zinc-900 text-white text-sm font-bold hover:bg-zinc-800 transition-all">
@@ -53,13 +53,85 @@ export default function TechForImpactContent() {
                         </a>
                     </div>
                 </div>
+            </section>
 
-                <div className="flex flex-wrap gap-2.5">
-                    {['React', 'SolidJS', 'Node.js', 'Technical PM', 'Scenario Design', 'Full-Stack'].map(tag => (
-                        <span key={tag} className="px-3 py-1.5 bg-indigo-50 text-indigo-600 text-xs font-bold rounded-lg border border-indigo-100">
-                            {tag}
-                        </span>
-                    ))}
+            {/* Master Summary Section */}
+            <section className="grid grid-cols-1 md:grid-cols-5 gap-6 p-8 bg-zinc-50 border border-zinc-100 rounded-[2rem] shadow-sm">
+                <div className="space-y-2 md:col-span-1">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Calendar size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">Timeline</span>
+                    </div>
+                    <p className="font-semibold text-zinc-900 text-sm">2024.08 – 2026.01</p>
+                </div>
+                <div className="space-y-3 md:col-span-2">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Users size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">Team</span>
+                    </div>
+                    <div className="space-y-3">
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                            <span className="text-[11px] font-black text-zinc-800 mr-0.5 bg-zinc-200/50 px-2.5 py-1 rounded-md">Campus <span className="text-zinc-500 font-bold ml-0.5">6</span></span>
+                            <div className="flex items-center gap-1.5 px-2 py-1 bg-indigo-50 border border-indigo-100 text-indigo-700 text-[10px] font-bold rounded-md shadow-sm">
+                                PM <span className="bg-indigo-100 text-indigo-800 px-1.5 rounded-sm">1</span>
+                            </div>
+                            <div className="flex items-center gap-1.5 px-2 py-1 bg-pink-50 border border-pink-100 text-pink-700 text-[10px] font-bold rounded-md shadow-sm">
+                                Design <span className="bg-pink-100 text-pink-800 px-1.5 rounded-sm">1</span>
+                            </div>
+                            <div className="flex items-center gap-1.5 px-2 py-1 bg-blue-50 border border-blue-100 text-blue-700 text-[10px] font-bold rounded-md shadow-sm">
+                                FE <span className="bg-blue-100 text-blue-800 px-1.5 rounded-sm">2</span>
+                            </div>
+                            <div className="flex items-center gap-1.5 px-2 py-1 bg-emerald-50 border border-emerald-100 text-emerald-700 text-[10px] font-bold rounded-md shadow-sm">
+                                BE <span className="bg-emerald-100 text-emerald-800 px-1.5 rounded-sm">2</span>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                            <span className="text-[11px] font-black text-zinc-500 mr-0.5 bg-zinc-100 px-2.5 py-1 rounded-md border border-zinc-200/60">Lab <span className="text-zinc-400 font-bold ml-0.5">12</span></span>
+                            <div className="flex items-center gap-1.5 px-2 py-1 bg-zinc-50 border border-zinc-200/80 text-zinc-500 text-[10px] font-bold rounded-md shadow-sm">
+                                Plan <span className="bg-zinc-200 text-zinc-600 px-1.5 rounded-sm">4</span>
+                            </div>
+                            <div className="flex items-center gap-1.5 px-2 py-1 bg-zinc-50 border border-zinc-200/80 text-zinc-500 text-[10px] font-bold rounded-md shadow-sm">
+                                Design <span className="bg-zinc-200 text-zinc-600 px-1.5 rounded-sm">4</span>
+                            </div>
+                            <div className="flex items-center gap-1.5 px-2 py-1 bg-zinc-50 border border-zinc-200/80 text-zinc-500 text-[10px] font-bold rounded-md shadow-sm">
+                                FE <span className="bg-zinc-200 text-zinc-600 px-1.5 rounded-sm">2</span>
+                            </div>
+                            <div className="flex items-center gap-1.5 px-2 py-1 bg-zinc-50 border border-zinc-200/80 text-zinc-500 text-[10px] font-bold rounded-md shadow-sm">
+                                BE <span className="bg-zinc-200 text-zinc-600 px-1.5 rounded-sm">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="space-y-2 md:col-span-2">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Briefcase size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">Role & Contribution</span>
+                    </div>
+                    <p className="font-semibold text-zinc-900 text-sm leading-relaxed">
+                        {lang === 'ko' ? 'Technical PM, 풀스택 리드, 시나리오 엔진 연동' : 'Technical PM, Full-Stack Lead, Scenario Engine integration'}
+                    </p>
+                </div>
+                <div className="space-y-2 md:col-span-5 border-t border-zinc-200 pt-6">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Lightbulb size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">TL;DR</span>
+                    </div>
+                    <p className="font-semibold text-zinc-900 text-sm sm:text-base">
+                        {lang === 'ko' ? '재난 안전 교육의 한계를 깨는 온라인 재난가방 시뮬레이션 및 게이미피케이션 플랫폼' : 'An online survival kit simulation and gamification platform breaking the boundaries of disaster safety education'}
+                    </p>
+                </div>
+                <div className="space-y-3 md:col-span-5 border-t border-zinc-200 pt-6">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Layers size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">Tech Stack & Key Roles</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                        {['React', 'SolidJS', 'Node.js', 'Technical PM', 'Scenario Design', 'Full-Stack'].map(tag => (
+                            <span key={tag} className="px-3 py-1.5 bg-white text-zinc-700 text-[11px] font-black uppercase tracking-wider rounded-lg border border-zinc-200 shadow-sm">
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -74,9 +146,9 @@ export default function TechForImpactContent() {
                 <div className="md:col-span-3 text-zinc-600 leading-relaxed text-lg space-y-4">
                     <p>
                         {lang === 'ko' ? (
-                            <>기존의 오프라인 재난 교육 키트는 <strong>비싼 교구 비용, 무거운 무게, 그리고 단발성 교육</strong>이라는 명확한 한계가 있었습니다. 우리는 이를 디지털로 전환하여 누구나 어디서든 체험할 수 있는 <strong>'온라인 재난가방 시뮬레이션'</strong>을 구축했습니다.</>
+                            <>기존의 오프라인 재난 교육 키트는 <strong>비싼 교구 비용, 무거운 무게, 그리고 단발성 교육</strong>이라는 명확한 한계가 있었습니다. 우리는 이를 디지털로 전환하여 누구나 어디서든 체험할 수 있는 <strong>&apos;온라인 재난가방 시뮬레이션&apos;</strong>을 구축했습니다.</>
                         ) : (
-                            <>Traditional offline disaster education kits had clear limitations: <strong>expensive materials, heavy physical weight, and one-off usage</strong>. We digitized this experience, building an <strong>'Online Survival Kit Simulation'</strong> accessible to everyone, anywhere.</>
+                            <>Traditional offline disaster education kits had clear limitations: <strong>expensive materials, heavy physical weight, and one-off usage</strong>. We digitized this experience, building an <strong>&apos;Online Survival Kit Simulation&apos;</strong> accessible to everyone, anywhere.</>
                         )}
                     </p>
                 </div>
@@ -208,9 +280,9 @@ export default function TechForImpactContent() {
                                     </h4>
                                     <p className="text-zinc-300 leading-relaxed">
                                         {lang === 'ko' ? (
-                                            <>시니어 기획자들 간의 의견 대립과 인력 이탈이라는 조직적 위기 속에서 <strong>'끈기'와 '구체화'</strong>를 무기로 프로젝트를 완수했습니다. 추상적인 아이디어를 화면 명세서(Wireframe)와 API 명세로 변환하여 팀의 목표를 하나로 정렬시켰습니다.</>
+                                            <>시니어 기획자들 간의 의견 대립과 인력 이탈이라는 조직적 위기 속에서 <strong>&apos;끈기&apos;와 &apos;구체화&apos;</strong>를 무기로 프로젝트를 완수했습니다. 추상적인 아이디어를 화면 명세서(Wireframe)와 API 명세로 변환하여 팀의 목표를 하나로 정렬시켰습니다.</>
                                         ) : (
-                                            <>Amidst organizational crises—conflicts between senior planners and team turnover—I completed the project armed with <strong>'persistence' and 'crystallization'</strong>. I turned abstract ideas into wireframes and API specifications to align the team's singular goal.</>
+                                            <>Amidst organizational crises—conflicts between senior planners and team turnover—I completed the project armed with <strong>&apos;persistence&apos; and &apos;crystallization&apos;</strong>. I turned abstract ideas into wireframes and API specifications to align the team's singular goal.</>
                                         )}
                                     </p>
                                     <div className="bg-zinc-800 rounded-2xl p-6 border border-zinc-700/50">

@@ -3,8 +3,9 @@
 import React, { useState } from 'react';
 import {
     ExternalLink, Code2, Cpu, Globe, ShieldCheck,
-    Layers, Terminal, Zap, Database, Maximize,
-    FileText, GitPullRequest, Laptop, ServerOff
+    Layers, Database, Maximize,
+    FileText, GitPullRequest,
+    Calendar, Users, Briefcase, Lightbulb
 } from 'lucide-react';
 
 export default function WebVDIContent() {
@@ -42,9 +43,6 @@ export default function WebVDIContent() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
                     <div className="space-y-3">
                         <h1 className="text-5xl font-extrabold tracking-tight text-zinc-900 italic">Modernizing VDI</h1>
-                        <p className="text-zinc-500 text-lg font-medium flex items-center gap-2">
-                            2025 Fall Semester
-                        </p>
                     </div>
                     <div className="flex items-center gap-3">
                         <button onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')} className="px-4 py-2 rounded-xl bg-zinc-900 text-white text-sm font-bold hover:bg-zinc-800 transition-all">
@@ -56,13 +54,58 @@ export default function WebVDIContent() {
                         </a>
                     </div>
                 </div>
+            </section>
 
-                <div className="flex flex-wrap gap-2.5">
-                    {['React 19', 'Vite 7', 'Rust', 'WASM', 'WebSockets', 'Zero-Trust'].map(tag => (
-                        <span key={tag} className="px-3 py-1.5 bg-zinc-100 text-zinc-600 text-[11px] font-black uppercase tracking-wider rounded-lg border border-zinc-200">
-                            {tag}
-                        </span>
-                    ))}
+            {/* Master Summary Section */}
+            <section className="grid grid-cols-1 md:grid-cols-5 gap-6 p-8 bg-zinc-50 border border-zinc-100 rounded-[2rem] shadow-sm">
+                <div className="space-y-2 md:col-span-1">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Calendar size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">Timeline</span>
+                    </div>
+                    <p className="font-semibold text-zinc-900 text-sm">2025 Fall</p>
+                </div>
+                <div className="space-y-3 md:col-span-2">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Users size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">Team</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                        <div className="flex items-center gap-1.5 px-3 py-1 bg-zinc-900 border border-zinc-800 text-white text-[11px] font-bold rounded-lg shadow-sm">
+                            <span className="text-lg leading-none mt-[-1px]">🚀</span> {lang === 'ko' ? '1인 개인 프로젝트' : '1 Individual Project'}
+                        </div>
+                    </div>
+                </div>
+                <div className="space-y-2 md:col-span-2">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Briefcase size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">Role & Contribution</span>
+                    </div>
+                    <p className="font-semibold text-zinc-900 text-sm leading-relaxed">
+                        {lang === 'ko' ? '기획, WASM/React 아키텍처 설계, 풀스택 구현' : 'Planning, WASM/React Architecture Design, Full-Stack Dev'}
+                    </p>
+                </div>
+                <div className="space-y-2 md:col-span-5 border-t border-zinc-200 pt-6">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Lightbulb size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">TL;DR</span>
+                    </div>
+                    <p className="font-semibold text-zinc-900 text-sm sm:text-base">
+                        {lang === 'ko' ? 'Rust 기반 RDP 시스템을 WASM으로 브라우저에 이식한 Zero-Client 원격 데스크톱' : 'Zero-Client Remote Desktop porting Rust-based RDP system into the browser via WASM'}
+                    </p>
+                </div>
+                <div className="space-y-3 md:col-span-5 border-t border-zinc-200 pt-6">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Layers size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">Tech Stack</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                        {['React 19', 'Vite 7', 'Rust', 'WASM', 'WebSockets', 'Zero-Trust'].map(tag => (
+                            <span key={tag} className="px-3 py-1.5 bg-white text-zinc-700 text-[11px] font-black uppercase tracking-wider rounded-lg border border-zinc-200 shadow-sm">
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -73,7 +116,7 @@ export default function WebVDIContent() {
                         <ShieldCheck size={18} /> The Mission
                     </h2>
                     <h3 className="text-4xl font-bold text-zinc-900 leading-tight">
-                        "기존 VDI의 한계를 넘는<br />브라우저 네이티브 원격 환경"
+                        &quot;기존 VDI의 한계를 넘는<br />브라우저 네이티브 원격 환경&quot;
                     </h3>
                     <div className="space-y-4 text-zinc-600 text-[16px] leading-relaxed">
                         <p>
@@ -213,12 +256,12 @@ export default function WebVDIContent() {
                             <p className="text-xs text-blue-700 leading-relaxed">
                                 {lang === 'ko' ? (
                                     <>
-                                        오픈소스 기여를 위해 "Zero-to-Hero" 배포 가이드를 작성했습니다.
+                                        오픈소스 기여를 위해 &quot;Zero-to-Hero&quot; 배포 가이드를 작성했습니다.
                                         Rust와 WASM 환경 구축부터 네트워크 트러블슈팅까지 문서화하여 신규 컨트리뷰터의 진입 장벽을 낮췄습니다.
                                     </>
                                 ) : (
                                     <>
-                                        Wrote a "Zero-to-Hero" deployment guide to encourage open-source contributions.
+                                        Wrote a &quot;Zero-to-Hero&quot; deployment guide to encourage open-source contributions.
                                         By documenting everything from setting up the Rust and WASM environments to network troubleshooting, it lowers the barrier to entry for new contributors.
                                     </>
                                 )}
@@ -247,7 +290,7 @@ export default function WebVDIContent() {
                             <p className="text-sm text-zinc-500 leading-relaxed">
                                 {lang === 'ko'
                                     ? 'Devolutions의 IronRDP 메인 레포지토리에 이 React 클라이언트를 기본 웹 인터페이스로 제안하는 PR(Pull Request) 준비 중.'
-                                    : 'Preparing a PR to propose this React client as the default web interface for Devolutions\' main IronRDP repository.'}
+                                    : 'Preparing a PR to propose this React client as the default web interface for Devolutions&apos; main IronRDP repository.'}
                             </p>
                         </div>
                         <div className="p-10 bg-indigo-600 rounded-[2.5rem] text-white space-y-6 relative overflow-hidden group">
@@ -316,13 +359,13 @@ export default function WebVDIContent() {
                 <div className="max-w-3xl mx-auto text-zinc-400 leading-relaxed italic">
                     {lang === 'ko' ? (
                         <>
-                            "단순한 프로토타이핑을 넘어, 엄격한 소프트웨어 공학 표준을 준수하며 개발했습니다.<br />
-                            기술적 깊이와 유지보수 가능성을 동시에 확보하는 것, 그것이 오픈소스 생태계에 기여하는 개발자의 올바른 자세임을 배웠습니다."
+                            &quot;단순한 프로토타이핑을 넘어, 엄격한 소프트웨어 공학 표준을 준수하며 개발했습니다.<br />
+                            기술적 깊이와 유지보수 가능성을 동시에 확보하는 것, 그것이 오픈소스 생태계에 기여하는 개발자의 올바른 자세임을 배웠습니다.&quot;
                         </>
                     ) : (
                         <>
-                            "Beyond simple prototyping, this was developed adhering to strict software engineering standards.<br />
-                            I learned that securing both technical depth and maintainability is the correct mindset for a developer contributing to the open-source ecosystem."
+                            &quot;Beyond simple prototyping, this was developed adhering to strict software engineering standards.<br />
+                            I learned that securing both technical depth and maintainability is the correct mindset for a developer contributing to the open-source ecosystem.&quot;
                         </>
                     )}
                 </div>

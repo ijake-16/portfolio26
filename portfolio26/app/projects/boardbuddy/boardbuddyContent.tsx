@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import {
-    ExternalLink, Calendar, Users, BarChart3, ShieldCheck,
-    Settings, Download, Smartphone, Zap, Database, TrendingUp,
-    Snowflake, Award, MessageSquare, Briefcase
+    Calendar, Users, BarChart3,
+    Settings, Download, Smartphone, Database, TrendingUp,
+    Snowflake, Award, Briefcase, Lightbulb, Layers, Zap
 } from 'lucide-react';
 
 export default function BoardbuddyContent() {
@@ -38,9 +38,6 @@ export default function BoardbuddyContent() {
                             <h1 className="text-5xl font-extrabold tracking-tight text-zinc-900">보드버디</h1>
                             <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-black rounded-full uppercase">Beta Version 0.6</span>
                         </div>
-                        <p className="text-zinc-500 text-lg font-medium flex items-center gap-2">
-                            <Calendar size={18} /> 2025.11 – Present (Next Season Launching)
-                        </p>
                     </div>
                     <div className="flex items-center gap-3">
                         <button onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')} className="px-4 py-2 rounded-xl bg-zinc-900 text-white text-sm font-bold hover:bg-zinc-800 transition-all">
@@ -48,13 +45,64 @@ export default function BoardbuddyContent() {
                         </button>
                     </div>
                 </div>
+            </section>
 
-                <div className="flex flex-wrap gap-2.5">
-                    {['React', 'Spring Boot', 'Redis', 'PostgreSQL', 'Product Ownership', 'UI/UX Design', 'BM Strategy'].map(tag => (
-                        <span key={tag} className="px-4 py-2 bg-zinc-50 text-zinc-600 text-xs font-bold rounded-xl border border-zinc-200 shadow-sm">
-                            {tag}
-                        </span>
-                    ))}
+            {/* Master Summary Section */}
+            <section className="grid grid-cols-1 md:grid-cols-5 gap-6 p-8 bg-zinc-50 border border-zinc-100 rounded-[2rem] shadow-sm">
+                <div className="space-y-2 md:col-span-1">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Calendar size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">Timeline</span>
+                    </div>
+                    <p className="font-semibold text-zinc-900 text-sm">2025.11 – Present</p>
+                </div>
+                <div className="space-y-3 md:col-span-2">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Users size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">Team <span className="ml-1 px-1.5 py-0.5 bg-zinc-200 text-zinc-600 rounded-md text-[10px]">3</span></span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                        <div className="flex items-center gap-1.5 px-2 py-1 bg-blue-50 border border-blue-100 text-blue-700 text-[11px] font-bold rounded-lg shadow-sm">
+                            Plan/FE <span className="bg-blue-100 text-blue-800 px-1.5 rounded-sm">1</span>
+                        </div>
+                        <div className="flex items-center gap-1.5 px-2 py-1 bg-emerald-50 border border-emerald-100 text-emerald-700 text-[11px] font-bold rounded-lg shadow-sm">
+                            BE/DevOps <span className="bg-emerald-100 text-emerald-800 px-1.5 rounded-sm">1</span>
+                        </div>
+                        <div className="flex items-center gap-1.5 px-2 py-1 bg-pink-50 border border-pink-100 text-pink-700 text-[11px] font-bold rounded-lg shadow-sm">
+                            Design <span className="bg-pink-100 text-pink-800 px-1.5 rounded-sm">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="space-y-2 md:col-span-2">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Briefcase size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">Role & Contribution</span>
+                    </div>
+                    <p className="font-semibold text-zinc-900 text-sm leading-relaxed">
+                        {lang === 'ko' ? 'Product Owner, UI/UX 디자인, 프론트엔드 개발' : 'Product Owner, UI/UX Design, Frontend Dev'}
+                    </p>
+                </div>
+                <div className="space-y-2 md:col-span-5 border-t border-zinc-200 pt-6">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Lightbulb size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">TL;DR</span>
+                    </div>
+                    <p className="font-semibold text-zinc-900 text-sm sm:text-base">
+                        {lang === 'ko' ? '연합 스노보드 동아리 운영의 페인포인트를 해결하는 올인원 시즌방 관리 플랫폼' : 'All-in-One season-room management platform solving pain points of university snowboard unions'}
+                    </p>
+                </div>
+                <div className="space-y-3 md:col-span-5 border-t border-zinc-200 pt-6">
+                    <div className="flex items-center gap-2 text-zinc-500 mb-1">
+                        <Layers size={16} />
+                        <span className="text-xs font-bold uppercase tracking-widest">Tech Stack & Key Roles</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                        {['React', 'Spring Boot', 'Redis', 'PostgreSQL', 'Product Ownership', 'UI/UX Design', 'BM Strategy'].map(tag => (
+                            <span key={tag} className="px-3 py-1.5 bg-white text-zinc-700 text-[11px] font-black uppercase tracking-wider rounded-lg border border-zinc-200 shadow-sm">
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -62,10 +110,10 @@ export default function BoardbuddyContent() {
             <section className="grid lg:grid-cols-2 gap-16 items-start border-t border-zinc-100 pt-16">
                 <div className="space-y-6">
                     <h2 className="text-sm uppercase tracking-[0.2em] font-black text-blue-600 flex items-center gap-2">
-                        <Award size={18} /> The Founder's Pain Point
+                        <Award size={18} /> The Founder&apos;s Pain Point
                     </h2>
                     <h3 className="text-4xl font-bold text-zinc-900 leading-tight">
-                        "회장 출신 개발자가 직접 경험한<br />관리의 비효율을 해결하다"
+                        &quot;회장 출신 개발자가 직접 경험한<br />관리의 비효율을 해결하다&quot;
                     </h3>
                     <div className="space-y-4 text-zinc-600 text-[17px] leading-relaxed">
                         <p>
